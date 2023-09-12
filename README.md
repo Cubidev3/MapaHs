@@ -30,4 +30,4 @@ perceba o uso de "<-" ao invéz de "=".
 
 # Exemplos
 
-![image](https://github.com/Cubidev3/MapaHs/assets/100206395/f4530fe6-9c17-4370-b55d-6139a1bac101)
+![image](https://github.com/Cubidev3/MapaHs/assets/100206395/d20afff4-7847-4b02-8870-f1668d526461)
