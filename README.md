@@ -16,6 +16,7 @@ Há duas funções disponíveis:
 
 
 carregarMapa :: String -> IO Mapa
+
 salvarMapa :: Mapa -> String -> IO Bool
 
 
