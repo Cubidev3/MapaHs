@@ -23,7 +23,7 @@ type Mapa = [(String, (Double, Double), [String])]
 
 Elas devem ser usadas dessa forma:
 
-mapa <- carregarMapa "arquivo.mapa""
+mapa <- carregarMapa "arquivo.mapa"
 
 resultadoSave <- salvarMapa mapa "arquivo.mapa" 
 
