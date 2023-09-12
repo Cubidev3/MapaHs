@@ -14,18 +14,23 @@ import Mapa
 
 Há duas funções disponíveis:
 
+
 carregarMapa :: String -> IO Mapa
 salvarMapa :: Mapa -> String -> IO Bool
+
 
 e o tipo:
 
 type Mapa = [(String, (Double, Double), [String])]
 
+
 Elas devem ser usadas dessa forma:
+
 
 mapa <- carregarMapa "arquivo.mapa"
 
 resultadoSave <- salvarMapa mapa "arquivo.mapa" 
+
 
 perceba o uso de "<-" ao invéz de "=".
 
