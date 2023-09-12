@@ -1,4 +1,4 @@
-module Mapa(salvarMapa, carregarMapa) where
+module Mapa(salvarMapa, carregarMapa, Mapa) where
 
 import Data.List.Split
 import GHC.IO.Handle
