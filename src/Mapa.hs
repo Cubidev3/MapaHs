@@ -1,6 +1,5 @@
 module Mapa(salvarMapa, carregarMapa, Mapa) where
 
-import Data.List.Split
 import GHC.IO.Handle
 import GHC.IO.IOMode (IOMode(ReadMode, WriteMode))
 import GHC.IO.Handle.FD (openFile)
@@ -41,8 +40,8 @@ carregarMapaDoArquivo caminho = do
 hCarregarMapa :: Handle -> IO Mapa
 hCarregarMapa handle = do
     conteudo <- hGetContents' handle
-    let linhas = filter (not . null) (splitOn "\n" conteudo) -- O filter remove as possiveis linhas vazias (literalmente vazias, espacos sao caracteres)
-    let componentes = map (splitOn ",") linhas
+    let linhas = filter (not . null) (splitOn '\n' conteudo) -- O filter remove as possiveis linhas vazias (literalmente vazias, espacos sao caracteres)
+    let componentes = map (splitOn ',') linhas
     return (paraMapa componentes)
 
 -- Tenta converter uma lista de lista de String num Mapa válido. Para o programa caso uma das listas seja insuficiente para criar uma cidade
@@ -81,6 +80,17 @@ joinWith :: String -> [String] -> String
 joinWith _ [] = ""
 joinWith _ [a] = a
 joinWith toInsert ss = foldr1 (\m n -> m ++ toInsert ++ n) ss
+
+splitOn :: (Eq a) => a -> [a] -> [[a]]
+splitOn _ [] = []
+splitOn a [x]
+ | a == x = [[]]
+ | otherwise = [[x]]
+
+splitOn a (x:xs)
+ | a == x = [] : tailSplit
+ | otherwise = (x : head tailSplit) : tail tailSplit
+ where tailSplit = splitOn a xs
 
 -- It's-a-me, Mario!
 -- Hello!
