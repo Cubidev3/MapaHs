@@ -1,4 +1,4 @@
-module Mapa(salvarMapa, carregarMapa, Mapa) where
+module Mapa(salvarMapa, carregarMapa, Mapa, Cidade, Rotas, Localizacao, Nome) where
 
 import GHC.IO.Handle
 import GHC.IO.IOMode (IOMode(ReadMode, WriteMode))
