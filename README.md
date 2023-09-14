@@ -20,8 +20,11 @@ salvarMapa :: Mapa -> String -> IO Bool
 
 e o tipo:
 
-type Mapa = [(String, (Double, Double), [String])]
-
+type Nome = String
+type Localizacao = (Double, Double)
+type Rotas = [Nome]
+type Cidade = (Nome, Localizacao, Rotas)
+type Mapa = [Cidade]
 
 Elas devem ser usadas dessa forma:
 
