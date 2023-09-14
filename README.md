@@ -3,12 +3,10 @@ Pequeno Módulo para carregar e salvar mapas em Haskell
 
 # Importação
 
-é necessário ter o Cabal instalado. Se possui Haskell instalado, provavelmente já possui o Cabal, ele é instalado junto ao GHC pelo GHCUP (https://www.haskell.org/ghcup/)
-Dito isso, basta baixar os arquivos desse repositório e executar ``cabal repl´´. Você estará no ghci, com MapaHS propiamente carregado. Ainda é possível carregar outros arquivos normalmente.
-
-Caso queria importar as funções deste módulo basta escrever no topo do seu arquivo:
-
+insira no topo do seu arquivo:
 import Mapa
+
+Basta carregar seu arquivo no ghci, esta biblioteca será carregada automaticamente
 
 # Uso
 
